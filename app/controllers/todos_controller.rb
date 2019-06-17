@@ -6,4 +6,8 @@ class TodosController < ApplicationController
   def new
     @todo = Todo.new
   end
+
+  def create
+    @todo = Todo.new(params[:todo])
+  end
 end
