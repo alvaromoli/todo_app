@@ -4,6 +4,7 @@
   <div class="card-block">
     <p class="card-text"><%= todo.description %></p>
     <%= link_to "Show", todo_path(todo.id) %>
+    <%= link_to "Edit", todo_edit_path(todo.id) %>
   </div>
 </div>
 <% end %>
