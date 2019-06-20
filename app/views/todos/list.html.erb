@@ -1,0 +1,24 @@
+<div class="row">
+  <% @completed = @todos.select { |todo| todo.completed == true } %>
+  <% @uncompleted = @todos.select { |todo| todo.completed == false } %>
+  <div class="col-6">
+    <h1>Uncompleted</h1>
+    <% @uncompleted.each do |uncomp| %>
+      <div class="card">
+        <div class="card-block">
+          <p class="card-body"><%= uncomp.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-6">
+    <h1>Completed</h1>
+    <% @completed.each do |comp| %>
+      <div class="card">
+        <div class="card-block">
+          <p class="card-body"><%= comp.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
